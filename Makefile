@@ -19,7 +19,17 @@ restart:
 
 .PHONY: migrate
 migrate:
-	docker compose exec dotnet-backend dotnet ef database update --project TrafficClaimIntegratorAPI
+	@if [ ! -d apps/TrafficClaimIntegratorAPI/Migrations ]; then \
+		echo "➕ Creating initial EF Core migration..."; \
+		cd apps/TrafficClaimIntegratorAPI && dotnet ef migrations add InitialCreate; \
+	else \
+		echo "✅ Migrations already exist."; \
+	fi && \
+	cd apps/TrafficClaimIntegratorAPI && dotnet ef database update
+
+.PHONY: migration # make migration name=AddClaimsTable
+migration:
+	docker compose exec dotnet-backend dotnet ef migrations add $(name)
 
 .PHONY: bash
 bash:
