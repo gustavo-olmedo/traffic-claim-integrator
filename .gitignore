@@ -36,8 +36,7 @@ apps/TrafficClaimIntegratorAPI/*.dbmdl
 apps/TrafficClaimIntegratorAPI/appsettings.*.json
 
 # === Infrastructure / Docker ===
-infra/db/data/
-infra/db/init.sql
+infra/local/db/pgdata
 infra/nginx/logs/
 docker-compose.override.yml
 
