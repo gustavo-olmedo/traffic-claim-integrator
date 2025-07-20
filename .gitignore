@@ -1,0 +1,62 @@
+# === Global ===
+*.DS_Store
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+Thumbs.db
+.env
+.env.*
+
+# === Node / React frontend ===
+apps/frontend/node_modules/
+apps/frontend/.next/
+apps/frontend/.turbo/
+apps/frontend/dist/
+apps/frontend/build/
+apps/frontend/npm-debug.log*
+apps/frontend/yarn-debug.log*
+apps/frontend/yarn-error.log*
+apps/frontend/.eslintcache
+apps/frontend/.parcel-cache
+apps/frontend/.vite/
+apps/frontend/.cache/
+
+# === .NET backend ===
+apps/TrafficClaimIntegratorAPI/bin/
+apps/TrafficClaimIntegratorAPI/obj/
+apps/TrafficClaimIntegratorAPI/TestResults/
+apps/TrafficClaimIntegratorAPI/.vs/
+apps/TrafficClaimIntegratorAPI/*.user
+apps/TrafficClaimIntegratorAPI/*.suo
+apps/TrafficClaimIntegratorAPI/*.cache
+apps/TrafficClaimIntegratorAPI/*.pdb
+apps/TrafficClaimIntegratorAPI/*.dbmdl
+apps/TrafficClaimIntegratorAPI/appsettings.*.json
+
+# === Infrastructure / Docker ===
+infra/db/data/
+infra/db/init.sql
+infra/nginx/logs/
+docker-compose.override.yml
+
+# === Editor / IDE ===
+.vscode/
+.idea/
+*.code-workspace
+
+# === Logs ===
+logs/
+*.log
+
+# === Coverage / Test ===
+coverage/
+*.lcov
+.nyc_output/
+
+# === Others ===
+*.sqlite
+*.sqlite3
+*.db
+*.pid
